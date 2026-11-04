@@ -1,0 +1,64 @@
+/* centrar la tarjeta en la pantalla */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* la tarjeta blanca (max-width para que se vea bien en el celular) */
+.tarjeta {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* formulario en columna */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+input,
+button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+input {
+    border: 2px solid #111;
+}
+
+button {
+    background: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* para los mensajes de error */
+.error {
+    color: red;
+}
