@@ -1,4 +1,4 @@
-/* centrar la tarjeta en la pantalla */
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -11,7 +11,7 @@ body {
     box-sizing: border-box;
 }
 
-/* la tarjeta blanca (max-width para que se vea bien en el celular) */
+/* la tarjeta blanca */
 .tarjeta {
     background: white;
     width: 100%;

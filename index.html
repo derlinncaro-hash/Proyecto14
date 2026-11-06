@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de edad</title>
 
-    <!-- estilos del calendario (flatpickr) -->
+    <!-- da la apariencia del calendario (flatpickr) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
-    <!-- mis estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,7 +15,6 @@
     <main class="tarjeta">
         <h1>Calculadora de edad</h1>
 
-        <!-- formulario donde se pone la fecha -->
         <form id="formulario">
             <label for="fecha">Ingresa tu fecha de nacimiento:</label>
             <input type="text" id="fecha" placeholder="dd/mm/aaaa" autocomplete="off">
@@ -27,12 +25,12 @@
         <p id="resultado"></p>
     </main>
 
-    <!-- flatpickr (calendario) y su idioma en español -->
+    <!-- flatpickr calendario y el idioma en español -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/l10n/es.js"></script>
-    <!-- luxon (cálculo de fechas) -->
+    <!-- luxon cálculo de fechas -->
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
-    <!-- mi código (siempre de último) -->
+
     <script src="script.js"></script>
 </body>
 

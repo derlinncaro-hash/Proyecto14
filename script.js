@@ -1,13 +1,13 @@
 // sacamos DateTime de luxon para poder usarlo
 const { DateTime } = luxon;
 
-// traemos los elementos del html
+// elementos del html
 const formulario = document.getElementById("formulario");
 const campoFecha = document.getElementById("fecha");
 const resultado = document.getElementById("resultado");
 
-// activamos el calendario de flatpickr en el campo
-// (en español, formato dia/mes/año y sin dejar elegir fechas futuras)
+// se activa el calendario de flatpickr en el campo 
+// en español
 flatpickr(campoFecha, {
     locale: "es",
     dateFormat: "d/m/Y",
@@ -30,7 +30,7 @@ formulario.addEventListener("submit", (evento) => {
     // convertimos el texto a una fecha de luxon
     const nacimiento = DateTime.fromFormat(campoFecha.value, "d/M/yyyy");
 
-    // validacion 2: que la fecha exista (por ejemplo 31/02 no existe)
+    // validacion 2 que la fecha exista (por ejemplo 31/02 no existe)
     if (!nacimiento.isValid) {
         resultado.classList.add("error");
         resultado.textContent = "La fecha no es válida. Usa el formato dd/mm/aaaa.";
@@ -40,10 +40,10 @@ formulario.addEventListener("submit", (evento) => {
     // fecha de hoy a las 00:00 para comparar solo los dias
     const hoy = DateTime.now().startOf("day");
 
-    // validacion 3: que no sea una fecha del futuro
+    // validacion 3 que no sea una fecha del futuro
     if (nacimiento > hoy) {
         resultado.classList.add("error");
-        resultado.textContent = "La fecha no puede ser futura.";
+        resultado.textContent = "La fecha no puede ser futura";
         return;
     }
 
@@ -51,7 +51,7 @@ formulario.addEventListener("submit", (evento) => {
     const edad = hoy.diff(nacimiento, ["years", "months", "days"]);
     const anios = edad.years;
     const meses = edad.months;
-    const dias = Math.floor(edad.days); // redondeamos porque los dias pueden salir con decimales
+    const dias = Math.floor(edad.days); 
 
     // mostramos el resultado en la misma pagina
     resultado.innerHTML =
